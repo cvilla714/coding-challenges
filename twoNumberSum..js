@@ -1,5 +1,6 @@
 // write a function that will add two numbers and will match the targetSum in each test case
 // this solution is not the optimal one because i am iterating twice over the array
+//O(n^2) time | O(1) space
 function twoNumberSum(array, targetSum) {
   // here we are makinmg i go to the value bfore the last value of the array
   for (let i = 0; i < array.length - 1; i++) {
@@ -35,7 +36,7 @@ console.log(twoNumberSum([14], 15));
 console.log(twoNumberSum([15], 15));
 
 // second soluution using a hash table
-
+// O(n) time | O(n) space
 function anothertwoNumberSum(anotherarray, anothertargetSum) {
   // we start by createing a dictionary of hash table
   const nums = {};
@@ -70,6 +71,7 @@ console.log(anothertwoNumberSum([14], 15));
 console.log(anothertwoNumberSum([15], 15));
 
 // the last solution which is hte most optimal solution
+// O(nlog(n)) | O(1) space
 function optimaltwoNumberSum(optimalarray, optimaltargetSum) {
   // we sstart by sortihn the array
   optimalarray.sort((a, b) => a - b);
